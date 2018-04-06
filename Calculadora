@@ -1,0 +1,39 @@
+package UnitMedia;
+import java.util.Scanner;
+
+public class Principal {	
+
+
+	public static void main(String[] args) {
+		
+	    Scanner a = new Scanner(System.in);
+		Aluno x = new Aluno();
+		UnitAp y = new UnitAp();
+		double Media;
+
+		
+		// Obter notas 
+		
+		System.out.println("Informe a nota da primeira ME:");
+		x.setME1(a.nextDouble());
+		
+		System.out.println("Informe a nota da primeira prova:");
+		x.setNota1(a.nextDouble());
+		
+		System.out.println("Informe a nota da segunda ME:");
+		x.setME2(a.nextDouble());
+		
+		System.out.println("Informe a nota da segunda prova:");
+		x.setNota2(a.nextDouble());
+		
+		
+        // Calcular e informar resultado
+        
+        Media = y.CalcularMedia(x.getNota1(), x.getNota2(), x.getME1(), x.getME2());
+        
+        System.out.println(Media);
+        
+	}
+	
+
+}
